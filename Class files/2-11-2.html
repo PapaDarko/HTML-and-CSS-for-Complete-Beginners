@@ -19,7 +19,131 @@
 
 			<h1>Your Order</h1>
 
+			<form action="" method="get" id="order-form">
+				<div>
+					<div>
+						<label for="order-name"> Name
+							<input input="text" name="order-name" id="order-name" placeholder="Your full name" autofocus>
+						</label>
+					</div>
 
+					<div>
+						<label for="order-email"> Email Address
+							<input input="email" name="order-email" id="order-email" disabled value="chuck@roundhouse.com">
+						</label>
+					</div>
+				</div>
+
+				<div>
+					<label for="order-address1"> Address
+						<input input="text" name="order-address1" id="order-address1">
+						<input input="text" name="order-address2" id="order-address2">
+					</label>
+				</div>
+				
+				<div>
+					<div>
+						<label for="order-city"> City
+							<input type="text" name="order-city" id="order-city">
+						</label>
+					</div>
+					
+					<div>
+						<label for="order-state"> State
+							<select name="order-state" id="order-state">
+								<option value="Alabama">Alabama</option>
+								<option value="Alaska">Alaska</option>
+								<option value="Maryland">Maryland</option>
+							</select>
+						</label>
+					</div>
+
+					<div>
+						<label for="order-zip"> ZIP
+							<input type="text" name="order-zip" id="order-zip">
+						</label>
+					</div>
+				</div>
+
+				<div>
+					<label> What color samples should we send you?</label>
+					
+					<label for="sample-white"> 
+						<input type="checkbox" name="color-sample" id="sample-white" disabled>
+						White
+					</label>
+
+					<label for="sample-magenta"> 
+						<input type="checkbox" name="color-sample" id="sample-magenta">
+						Magenta
+					</label>
+
+					<label for="sample-coral"> 
+						<input type="checkbox" name="color-sample" id="sample-coral">
+						Coral
+					</label>
+
+					<label for="sample-burgundy"> 
+						<input type="checkbox" name="color-sample" id="sample-burgundy">
+						Burgundy
+					</label>
+
+					<label for="sample-charcoal"> 
+						<input type="checkbox" name="color-sample" id="sample-charcoal">
+						Charcoal
+					</label>
+				</div>
+
+				<div>
+					<label> How large is your team </label>
+					
+					<!-- When the name is the same for some number of radios, you
+					 can only select one of them. The name represents the grouping.
+					 This is not the same for checkboxes.-->
+					<label for="1-5">
+						<input type="radio" name="team-size" id="1-5"> 1-5 people
+					</label>
+
+					<label for="6-10">
+						<input type="radio" name="team-size" id="6-10" checked> 6-10 peopple
+					</label>
+
+					<label for="10+">
+						<input type="radio" name="team-size" id="10"> 10+ peopple
+					</label>
+
+				</div>
+
+				<div>
+					<label for="order-comments">Comments</label>
+					<!-- Rows = width, Cols = height-->
+					<textarea name="order-comments" id="order-comments"></textarea>
+				</div>
+				
+				<div>
+					<label for="offer-sign-up">
+						<input type="checkbox" name="offer-sign-up" id="offer-sign-up"> Sign up for special offers
+					</label>
+				</div>
+
+				<!-- Multiple ways to submit a form --> 
+				 <!-- 1. button without attribs
+				 	<button>Place Order</button>
+				 -->
+				
+
+				 <!-- 2. Input button - additional code needed to
+				 get the form to submit.
+				 
+					<input type="button" value="Place Order"> -->
+				
+
+				<!-- 3. Input type submit, the same effect as 1st method
+				 	<input type="submit" value="Place Order"> -->	
+			</form>
+
+				<!-- 4. For outside the form, use the "form" attrib-->
+				<button form="order-form"> Place Order </button>
 
 			<!-- Practice area end -->
 		</section>
